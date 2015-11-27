@@ -1,17 +1,21 @@
+# Creds are read from file generated using aws CLI ("aws configure").
+access_key = `cat ~/.aws/credentials | grep aws_access | cut -d "=" -f2 | tr -d ' '`
+secret_key = `cat ~/.aws/credentials | grep aws_secret | cut -d "=" -f2 | tr -d ' '`
+
 install:
 	@terraform get -update
 
 plan: install
 	@terraform plan \
-		-var "access_key=`cat ~/.aws/credentials | grep aws_access | cut -d "=" -f2 | tr -d ' '`" \
-		-var "secret_key=`cat ~/.aws/credentials | grep aws_secret | cut -d "=" -f2 | tr -d ' '`" \
+		-var "access_key=$(access_key)" \
+		-var "secret_key=$(secret_key)" \
 		-module-depth=-1 \
 		-out "demo.tfplan"
 
 refresh: install
 	@terraform refresh \
-		-var "access_key=`cat ~/.aws/credentials | grep aws_access | cut -d "=" -f2 | tr -d ' '`" \
-		-var "secret_key=`cat ~/.aws/credentials | grep aws_secret | cut -d "=" -f2 | tr -d ' '`" \
+		-var "access_key=$(access_key)" \
+		-var "secret_key=$(secret_key)" \
 		-state-out "terraform.tfstate"
 
 apply: install
@@ -19,8 +23,8 @@ apply: install
 
 plan_destroy: install
 	@terraform plan \
-		-var "access_key=`cat ~/.aws/credentials | grep aws_access | cut -d "=" -f2 | tr -d ' '`" \
-		-var "secret_key=`cat ~/.aws/credentials | grep aws_secret | cut -d "=" -f2 | tr -d ' '`" \
+		-var "access_key=$(access_key)" \
+		-var "secret_key=$(secret_key)" \
 		-module-depth=-1 \
 		-destroy \
 		-out "demo.tfplan"
