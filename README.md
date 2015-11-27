@@ -11,6 +11,10 @@ Slides to accompany the demo @ http://slides.com/adammeghji/universe-terraform#/
 
 ## Installation
 
+This assumes that you're using Homebrew to install packages.
+
+1. `brew update`
+1. `brew install terraform` (verify per instructions at https://terraform.io/intro/getting-started/install.html)
 1. `brew install awscli` to install AWS CLI in OS X
 1. `aws configure` to configure AWS API keys
 
