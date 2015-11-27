@@ -6,7 +6,7 @@ resource "aws_instance" "tfdemo" {
 
     connection {
       user = "ubuntu"
-      key_file = "/Users/marms/.ssh/tfdemo.pem"
+      key_file = "~/.ssh/tfdemo.pem"
     }
 
     provisioner "remote-exec" {

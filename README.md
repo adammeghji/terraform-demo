@@ -9,6 +9,15 @@ This demo will:
 
 Slides to accompany the demo @ http://slides.com/adammeghji/universe-terraform#/
 
+## AWS account
+
+You'll need to set up your AWS account (http://aws.amazon.com/)!
+
+You'll also need to create a keypair named "tfdemo" in
+[us-west-2 region](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#KeyPairs:sort=keyName).
+Download and store the tfdemo.pem file in ~/.ssh/tfdemo.pem.
+
+
 ## Installation
 
 This assumes that you're using Homebrew to install packages.
