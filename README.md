@@ -11,11 +11,11 @@ Slides to accompany the demo @ http://slides.com/adammeghji/universe-terraform#/
 
 ## AWS account
 
-You'll need to set up your AWS account (http://aws.amazon.com/)!
-
-You'll also need to create a keypair named "tfdemo" in
+1. Create an AWS account (http://aws.amazon.com/) if you don't have one already.
+1. Create a keypair named "tfdemo" in
 [us-west-2 region](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#KeyPairs:sort=keyName).
-Download and store the tfdemo.pem file in ~/.ssh/tfdemo.pem.
+1. Download and store the tfdemo.pem file in ~/.ssh/tfdemo.pem.
+1. `chmod 400 ~/.ssh/tfdemo.pem` (the demo SSHs into boxes with this key; the connection times out if you don't set perms).
 
 
 ## Installation
