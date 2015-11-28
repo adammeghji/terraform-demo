@@ -7,6 +7,8 @@ This demo will:
  - provision 1 ELB load balancer
  - configure DNS @ "tfdemo.universe.com"
 
+Slides to accompany the demo @ http://slides.com/adammeghji/universe-terraform#/
+
 ## Installation
 
 1. `brew install awscli` to install AWS CLI in OS X
