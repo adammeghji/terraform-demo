@@ -9,8 +9,21 @@ This demo will:
 
 Slides to accompany the demo @ http://slides.com/adammeghji/universe-terraform#/
 
+## AWS account
+
+1. Create an AWS account (http://aws.amazon.com/) if you don't have one already.
+1. Create a keypair named "tfdemo" in
+[us-west-2 region](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#KeyPairs:sort=keyName).
+1. Download and store the tfdemo.pem file in ~/.ssh/tfdemo.pem.
+1. `chmod 400 ~/.ssh/tfdemo.pem` (the demo SSHs into boxes with this key; the connection times out if you don't set perms).
+
+
 ## Installation
 
+This assumes that you're using Homebrew to install packages.
+
+1. `brew update`
+1. `brew install terraform` (verify per instructions at https://terraform.io/intro/getting-started/install.html)
 1. `brew install awscli` to install AWS CLI in OS X
 1. `aws configure` to configure AWS API keys
 
