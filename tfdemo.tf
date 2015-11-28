@@ -38,8 +38,8 @@ resource "aws_elb" "frontend" {
 }
 
 resource "aws_route53_record" "tfdemo" {
-  zone_id = "ZT0C35LV57KL2"
-  name = "tfdemo.universe.com"
+  zone_id = "${var.aws_zone_id}"
+  name = "${var.hostname}"
   type = "A"
 
   alias {

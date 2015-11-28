@@ -9,3 +9,12 @@ provider "aws" {
     secret_key = "${var.secret_key}"
     region     = "${var.region}"
 }
+
+variable "aws_zone_id" {
+  default = "ZT0C35LV57KL2"
+}
+
+variable "hostname" {
+  default = "tfdemo.universe.com"
+}
+
